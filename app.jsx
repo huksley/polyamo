@@ -26,8 +26,8 @@ export const Slider = ({ id, title, labels, state, setState }) => {
 
       {Array.isArray(labels) && labels.length === 2 ? (
         <div className="flex flex-row justify-between gap-2">
-          <h3 className="text-xl font-bold text-slate-300">{labels[0]}</h3>
-          <h3 className="text-xl font-bold text-slate-300">{labels[1]}</h3>
+          <h3 className="text-sm md:text-md lg:text-lg font-bold text-slate-300">{labels[0]}</h3>
+          <h3 className="text-sm md:text-md lg:text-lg font-bold text-slate-300">{labels[1]}</h3>
         </div>
       ) : Array.isArray(labels) && labels.length > 2 ? (
         <table className="w-full">
@@ -39,10 +39,10 @@ export const Slider = ({ id, title, labels, state, setState }) => {
                 width={Math.round((1 / labels.length) * 100) + "%"}
                 className={
                   index === 0
-                    ? "text-xl font-bold text-slate-300"
+                    ? "text-sm md:text-md lg:text-lg font-bold text-slate-300"
                     : index === labels.length - 1
-                    ? "text-xl font-bold text-right text-slate-300"
-                    : "text-xl font-bold text-center text-slate-300"
+                    ? "text-sm md:text-md lg:text-lg font-bold text-right text-slate-300"
+                    : "text-sm md:text-md lg:text-lg font-bold text-center text-slate-300"
                 }
               >
                 {label}
