@@ -1,0 +1,31 @@
+{
+  "name": "polyamo2",
+  "version": "1.0.0",
+  "description": "Landing page for design related stuff, publically viewable. To edit, copy content of index.html into https://play.tailwindcss.com/",
+  "source": "./index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valosan/design.valosan.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valosan/design.valosan.com/issues"
+  },
+  "homepage": "https://github.com/valosan/design.valosan.com#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.30",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
