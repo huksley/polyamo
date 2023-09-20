@@ -196,8 +196,10 @@ export function App() {
             onClick={(e) => {
               e.preventDefault();
               const hash = btoa(JSON.stringify(state));
-              copy.current.copy(window.location.href + "#" + hash);
-              history.pushState(null, null, "#" + hash);
+              history.replaceState(null, null, "#" + hash);
+              setTimeout(() => {
+                copy.current.copy(window.location.href);
+              }, 100);
             }}
           >
             Make private link
