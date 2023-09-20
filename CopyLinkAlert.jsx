@@ -8,7 +8,7 @@ export const CopyLinkAlert = forwardRef(({ show, timeout }, ref) => {
     if (showNotification) {
       timeoutId = setTimeout(() => {
         setShowNotification(false);
-      }, timeout ?? 3000);
+      }, timeout ?? 4000);
     }
     return () => clearTimeout(timeoutId);
   }, [timeout, showNotification]);

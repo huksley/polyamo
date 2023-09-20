@@ -18,23 +18,9 @@ export const Slider = ({ id, title, labels, state, setState }) => {
   }, [state, id]);
 
   return (
-    <div className="rounded-md border border-slate-600 p-4">
-      {Array.isArray(labels) && labels.length === 2 ? (
-        <div className="flex flex-row justify-between gap-2">
-          <h3 className="text-xl font-bold">{labels[0]}</h3>
-          <h3 className="text-xl font-bold">{labels[0]}</h3>
-        </div>
-      ) : Array.isArray(labels) && labels.length > 2 ? (
-        <table className="w-full">
-          <tr>
-            {labels.map((label, index) => (
-              <td key={index} width={Math.round((1 / labels.length) * 100)} className="text-xl font-bold">
-                {labels[0]}
-              </td>
-            ))}
-          </tr>
-        </table>
-      ) : null}
+    <div className="rounded-md border border-slate-600 p-4 hover:border-slate-400 transition-colors duration-500 ease-in-out">
+      <div className="text-center text-2xl font-bold mb-3">{title ?? "title"}</div>
+
       <input
         type="range"
         min={0}
@@ -43,7 +29,32 @@ export const Slider = ({ id, title, labels, state, setState }) => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <div className="text-center">{title ?? "title"}</div>
+
+      {Array.isArray(labels) && labels.length === 2 ? (
+        <div className="flex flex-row justify-between gap-2">
+          <h3 className="text-xl font-bold text-slate-300">{labels[0]}</h3>
+          <h3 className="text-xl font-bold text-slate-300">{labels[1]}</h3>
+        </div>
+      ) : Array.isArray(labels) && labels.length > 2 ? (
+        <table className="w-full">
+          <tr>
+            {labels.map((label, index) => (
+              <td key={index} width={Math.round((1 / labels.length) * 100) + "%"} 
+              
+              className={
+                index === 0 ? 
+                "text-xl font-bold text-slate-300"
+                : index === labels.length - 1 ?
+                "text-xl font-bold text-right text-slate-300"
+                : "text-xl font-bold text-center text-slate-300"
+              
+              }>
+                {label}
+              </td>
+            ))}
+          </tr>
+        </table>
+      ) : null}
     </div>
   );
 };
@@ -84,7 +95,9 @@ export function App() {
       <h1 className="text-center text-4xl font-bold">Polyamo</h1>
 
       <div className="my-4 px-12 text-center">
-        Build your <b>unique</b> profile and match with others. Create a link and share with your partners.
+        Build your <b>unique</b> profile and match with others. 
+        Create a link and share with your partners.
+        You can share different links with different partners.
       </div>
 
 
