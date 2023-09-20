@@ -32,23 +32,24 @@ export const Slider = ({ id, title, labels, state, setState }) => {
       ) : Array.isArray(labels) && labels.length > 2 ? (
         <table className="w-full">
           <tbody>
-          <tr>
-            {labels.map((label, index) => (
-              <td
-                key={index}
-                width={Math.round((1 / labels.length) * 100) + "%"}
-                className={
-                  index === 0
-                    ? "text-sm md:text-md lg:text-lg font-bold text-slate-300"
-                    : index === labels.length - 1
-                    ? "text-sm md:text-md lg:text-lg font-bold text-right text-slate-300"
-                    : "text-sm md:text-md lg:text-lg font-bold text-center text-slate-300"
-                }
-              >
-                {label}
-              </td>
-            ))}
-          </tr></tbody>
+            <tr>
+              {labels.map((label, index) => (
+                <td
+                  key={index}
+                  width={Math.round((1 / labels.length) * 100) + "%"}
+                  className={
+                    index === 0
+                      ? "text-sm md:text-md lg:text-lg font-bold text-slate-300"
+                      : index === labels.length - 1
+                      ? "text-sm md:text-md lg:text-lg font-bold text-right text-slate-300"
+                      : "text-sm md:text-md lg:text-lg font-bold text-center text-slate-300"
+                  }
+                >
+                  {label}
+                </td>
+              ))}
+            </tr>
+          </tbody>
         </table>
       ) : null}
     </div>
@@ -194,7 +195,7 @@ export function App() {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              const hash = btoa(JSON.stringify(state))
+              const hash = btoa(JSON.stringify(state));
               copy.current.copy(window.location.href + "#" + hash);
               history.pushState(null, null, "#" + hash);
             }}
