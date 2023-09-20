@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axolotl from "./assets/axolotl.svg";
 
 export const Slider = ({ id, title, labels, state, setState }) => {
   const [value, setValue] = useState(state && id && state[id] ? state[id] : 50);
@@ -51,7 +52,7 @@ const saveStateToHash = (state) => {
   if (window.location.hash === "#" + hash) {
     return;
   }
-  window.location.hash = "#" + hash;
+  history.replaceState(null, null, "#" + hash);
 };
 
 const loadStateFromHash = () => {
@@ -71,11 +72,17 @@ export function App() {
 
   return (
     <div className="app w-full rounded-xl p-4">
+
+      <div className="flex flex-row justify-center">
+        <img src={axolotl}/>
+      </div>      
+
       <h1 className="text-center text-4xl font-bold">Polyamo</h1>
 
       <div className="my-4 px-12 text-center">
         Build your <b>unique</b> profile and match with others. Create a link and share with your partners.
       </div>
+
 
       <div className="flex flex-col gap-6">
         <Slider
