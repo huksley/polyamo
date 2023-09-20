@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axolotl from "./assets/axolotl.svg";
+import { CopyLinkAlert } from "./CopyLinkAlert";
 
 export const Slider = ({ id, title, labels, state, setState }) => {
   const [value, setValue] = useState(state && id && state[id] ? state[id] : 50);
@@ -69,6 +70,9 @@ export function App() {
   useEffect(() => {
     saveStateToHash(state);
   }, [state]);
+
+
+  const copy = useRef(null);
 
   return (
     <div className="app w-full rounded-xl p-4">
@@ -167,9 +171,16 @@ export function App() {
         />
       </div>
 
+      <CopyLinkAlert ref={copy} />
+
       <div className="flex justify-center p-4">
         <div className="relative inline-flex flex-row">
-          <a className="button" href="#">
+          <a className="button" href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              copy.current.copy(window.location.href);
+            }}
+          >
             Make private link
           </a>
         </div>

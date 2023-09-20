@@ -4,6 +4,7 @@
 
 body {
   @apply flex h-screen w-full items-center justify-center;
+  background-color: #010409;
 }
 
 
@@ -104,4 +105,12 @@ body {
 .button:hover::after {
   border: 1px solid white;
   animation: BorderAnimHover 1s;
+}
+
+
+.Alert {
+  background-color: #161b22;
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 12px;
 }
