@@ -191,7 +191,7 @@ export function App() {
       <div className="flex justify-center p-4">
         <div className="relative inline-flex flex-row">
           <a
-            className="button"
+            className="button plausible-event-name=MakeLinkClick"
             href="#"
             onClick={(e) => {
               e.preventDefault();

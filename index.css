@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --theme-bg-color: rgba(16 18 27 / 40%);
+  --body-font: "Poppins", sans-serif;
+}
+
 body {
   @apply flex h-screen w-full items-center justify-center;
   background-color: #010409;
+  font-family: var(--body-font);
+  background-image: url(./assets/bg.jpg);
 }
 
-:root {
-  --theme-bg-color: rgba(16 18 27 / 40%);
-}
 
 .video-bg {
   position: fixed;
@@ -28,7 +32,6 @@ body {
 .app {
   background-color: var(--theme-bg-color);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   color: white;
   z-index: 1;
   border: 1px solid black;
