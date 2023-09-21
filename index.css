@@ -31,7 +31,6 @@ body {
   backdrop-filter: blur(20px);
   color: white;
   z-index: 1;
-  border: 1px solid black;
 }
 
 .button {
