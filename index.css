@@ -151,3 +151,16 @@ footer:hover .fly {
     transform: translateX(0px) rotate(-45deg);
   }
 }
+
+input[type="range"] {
+  cursor: pointer;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: yellow;
+}

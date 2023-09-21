@@ -19,7 +19,7 @@ export const Slider = ({ id, title, labels, state, setState }) => {
         type="range"
         min={0}
         max={100}
-        className="w-full"
+        className="rounded-lg w-full appearance-none bg-[#1323ffde] [&::-webkit-slider-thumb]:bg-[white] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5  [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
