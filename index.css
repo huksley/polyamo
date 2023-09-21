@@ -8,12 +8,10 @@
 }
 
 body {
-  @apply flex h-screen w-full items-center justify-center;
   background-color: #010409;
   font-family: var(--body-font);
   background-image: url(./assets/bg.jpg);
 }
-
 
 .video-bg {
   position: fixed;
@@ -114,4 +112,44 @@ body {
   border-radius: 5px;
   padding: 12px;
   margin-bottom: 12px;
+}
+
+footer {
+  color: #ffffffde;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 1em;
+  z-index: 111;
+}
+
+footer .fly {
+  transform-origin: 50% 50%;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+footer:hover .fly {
+  animation-name: fly-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly-animation {
+  0% {
+    transform: translateX(0px) rotate(-45deg);
+  }
+  25% {
+    transform: translateX(-3px) rotate(-45deg);
+  }
+  50% {
+    transform: translateX(0px) rotate(-45deg);
+  }
+  75% {
+    transform: translateX(+3px) rotate(-45deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(-45deg);
+  }
 }

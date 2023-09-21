@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polyamo</title>
   <link rel="icon" href="./assets/axolotl.png" type="image/png" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"/>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
   <link rel="stylesheet" type="text/css" href="./index.css" />
   <meta name="author" content="@huksley" />
   <meta name="theme-color" content="#0095eb" />
@@ -20,12 +21,7 @@
   <meta property="og:locale" content="en-GB" />
   <meta property="og:image" content="./assets/axolotl.png" />
   <meta property="og:type" content="article" />
-  <script
-        async
-        defer
-        data-domain="polyamo.ruslan.org"
-        src="https://c.wizecore.com/js/collecte.js"
-      ></script>
+  <script async defer data-domain="polyamo.ruslan.org" src="https://c.wizecore.com/js/collecte.js"></script>
 </head>
 
 <body>
@@ -33,7 +29,17 @@
     <video width="320" height="240" autoplay loop muted playsinline src="./assets/video_fade.mp4"></video>
   </div>
 
-  <div id="root" class="h-full w-full md:p-6 lg:p-8 p-4 z-10"></div>
+  <div>
+    <div id="root" class="md:p-6 lg:p-8 p-4"></div>
+
+    <footer>
+      <div className="text-center mb-4 mt-4">
+        <a className="Item" href="https://yle.fi/a/74-20023112"><span class="text-lg">🇫🇮</span> Made in Helsinki</a>
+        <span class="fly text-lg">🚀</span> 2023 <a href="https://wizecore.com?utm_source=polyamo">Wizecore</a>
+      </div>
+    </footer>
+  </div>
+
   <script type="module" src="./index.js"></script>
 </body>
 
