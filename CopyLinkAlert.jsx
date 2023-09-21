@@ -32,13 +32,13 @@ export const CopyLinkAlert = forwardRef(({ show, timeout }, ref) => {
   );
 
   return showNotification ? (
-    <div className="fixed top-4 right-4 opacity-100 transition-opacity duration-500 ease-in-out">
-      <div className="Alert px-3 py-2 rounded-md flex items-center">
+    <div className="fixed z-20 top-4 right-4 opacity-100 transition-opacity duration-500 ease-in-out">
+      <div className="Alert px-3 py-2 rounded-md flex items-center text-white">
         <svg className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
           <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 110-12 6 6 0 010 12z" />
           <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
         </svg>
-        <span>Link copied to clipboard</span>
+        <span>Link copied to clipboard!</span>
       </div>
     </div>
   ) : null;
