@@ -10,7 +10,6 @@
 body {
   background-color: #010409;
   font-family: var(--body-font);
-  background-image: url(./assets/bg.jpg);
 }
 
 .video-bg {
